@@ -1,5 +1,7 @@
 # Squidiff reusability audit
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22234143.svg)](https://doi.org/10.5281/zenodo.22234143)
+
 Audit code, corrective patches and frozen numerical evidence for a leakage-safe
 reusability assessment of [Squidiff](https://doi.org/10.1038/s41592-025-02877-y),
 a diffusion model for predicting cellular development and responses to

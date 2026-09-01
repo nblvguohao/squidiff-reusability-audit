@@ -11,8 +11,8 @@ authors:
     affiliation: >-
       School of Artificial Intelligence, Anhui Agricultural University,
       Hefei 230036, China
-  - family-names: Xia
-    given-names: Yingchun
+  - family-names: Wang
+    given-names: Xiaosong
     affiliation: >-
       School of Artificial Intelligence, Anhui Agricultural University,
       Hefei 230036, China
@@ -60,6 +60,9 @@ keywords:
   - data leakage
 license: MIT
 repository-code: https://github.com/nblvguohao/squidiff-reusability-audit
+doi: 10.5281/zenodo.22234143
+version: 1.1.0
+date-released: 2026-09-01
 references:
   - type: article
     title: >-
