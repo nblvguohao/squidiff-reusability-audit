@@ -1,0 +1,26 @@
+# Candidate registry — priority is fixed: nichetrans → squidiff → cmonge → NO_GO
+# Do not reorder without updating src/reuse_gate/decision.py
+
+nichetrans:
+  name: NicheTrans
+  description: Spatial cross-omics translation for gastric cancer and immune niches
+  repository: https://github.com/<nichetrans-org>/nichetrans  # to be pinned
+  upstream_commit: null  # set on first successful pin
+  archive_doi: null
+  container_digest: null
+
+squidiff:
+  name: Squidiff
+  description: Diffusion-based prediction of CAR-NK state dynamics
+  repository: https://github.com/<squidiff-org>/squidiff  # to be pinned
+  upstream_commit: null
+  archive_doi: null
+  container_digest: null
+
+cmonge:
+  name: CMonge
+  description: Conditional optimal transport for unseen immune perturbations
+  repository: https://github.com/<cmonge-org>/cmonge  # to be pinned
+  upstream_commit: null
+  archive_doi: null
+  container_digest: null

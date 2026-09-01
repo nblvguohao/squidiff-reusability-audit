@@ -1,0 +1,20 @@
+diff --git a/vendor/Squidiff/Squidiff/train_util.py b/vendor/Squidiff/Squidiff/train_util.py
+index 8171081..109948e 100644
+--- a/vendor/Squidiff/Squidiff/train_util.py
++++ b/vendor/Squidiff/Squidiff/train_util.py
+@@ -226,13 +226,13 @@ class TrainLoop:
+             micro = batch['feature'][i : i + self.microbatch].to(dist_util.dev())
+             if self.use_drug_structure:
+                 micro_cond = {
+-                    'group': batch['group'][i : i + self.microbatch],
++                    'group': batch['group'][i : i + self.microbatch].to(dist_util.dev()),
+                     'drug_dose': batch['drug_dose'][i : i + self.microbatch].to(dist_util.dev()),
+                     'control_feature':batch['control_feature'].to(dist_util.dev()),
+                 }
+             else:
+                 micro_cond = {
+-                    'group': batch['group'][i : i + self.microbatch],
++                    'group': batch['group'][i : i + self.microbatch].to(dist_util.dev()),
+                     'drug_dose':None,
+                     'control_feature':None
+                 }

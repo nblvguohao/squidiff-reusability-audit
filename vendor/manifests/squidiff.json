@@ -1,0 +1,16 @@
+{
+  "candidate": "squidiff",
+  "name": "Squidiff",
+  "repository": "https://github.com/siyuh/Squidiff",
+  "pinned_commit": "abdfc27d84947dcccd745d1067c0840a41d32eb8",
+  "pinned_date": "2026-07-22",
+  "version": "1.0.8",
+  "doi": "10.1038/s41592-025-02877-y",
+  "paper_title": "Squidiff: predicting cellular development and responses to perturbations using a diffusion model",
+  "journal": "Nature Methods (2025)",
+  "installation": "pip install Squidiff",
+  "hardware_requirements": "GPU recommended (tested on NVIDIA H100 80GB); CPU possible but slow",
+  "container_digest": "containerless:uv-venv",
+  "notes": "Docker not available on evaluation machine; using uv venv with pinned commit. Upstream supports pip install.",
+  "evaluated_by": "biomed-reusability-gate (feat/biomed-reusability-gate)"
+}

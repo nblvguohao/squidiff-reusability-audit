@@ -1,0 +1,578 @@
+{
+  "release": "Squidiff reusability audit — public release",
+  "built": "2026-09-01",
+  "source_repository": "biomed-reusability-gate (private development repository)",
+  "excluded": [
+    "manuscript text and internal review record",
+    "trained checkpoints and generated populations (archived separately)",
+    "raw and staged data",
+    "laboratory remote-execution scripts and topology",
+    "vendored upstream source (pinned by revision, patched by vendor/patches)"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 793,
+      "sha256": "d09d586e82d875f57963f99b27c24b043c79563598ff7d372073981ef8dcd7fc"
+    },
+    {
+      "path": "artifacts/baseline_provenance/baseline_provenance.json",
+      "bytes": 2524,
+      "sha256": "3a7314716aa67947945010ba0c4a32e3dc45d6fccd8666e0133748dba897b440"
+    },
+    {
+      "path": "artifacts/cutoff_studies/early_d14/cutoff_summary.json",
+      "bytes": 652604,
+      "sha256": "612d7e1e58238d826e887df13e3a26c163ba37b8471440e513faf2eaaa7cd339"
+    },
+    {
+      "path": "artifacts/cutoff_studies/early_d14/posthoc_evaluation.json",
+      "bytes": 118737,
+      "sha256": "dead36212d9ffc450cc3093b1ae32f4ef10fe870374428c7921a4e88dbac2d5d"
+    },
+    {
+      "path": "artifacts/cutoff_studies/early_d14/split_manifest.json",
+      "bytes": 9185,
+      "sha256": "b229e60fcf77ef267b5d205ffde1d86cb7e08128fbbfbe51fbe34fd117a2a3f6"
+    },
+    {
+      "path": "artifacts/cutoff_studies/late_d28/cutoff_summary.json",
+      "bytes": 273023,
+      "sha256": "5f039d3d4a38bacf96909ec32a4555476db6b2450d09b875ff005ff936a0b1be"
+    },
+    {
+      "path": "artifacts/cutoff_studies/late_d28/posthoc_evaluation.json",
+      "bytes": 62552,
+      "sha256": "d56ea9a760d14ce7eba53a84c578a62b83fc37d87bb60cc4fb0f50f7067439d3"
+    },
+    {
+      "path": "artifacts/cutoff_studies/late_d28/split_manifest.json",
+      "bytes": 9237,
+      "sha256": "73a3ab266d5a44b803d50736f741dc4143cc371cf7bb9176c7f9e9dc5f09984d"
+    },
+    {
+      "path": "artifacts/cutoff_studies/primary_d21_d28/posthoc_evaluation.json",
+      "bytes": 336758,
+      "sha256": "669b3071926bdb189025a88898857ecc439d78b8292e9d28b117f0cdf913e88c"
+    },
+    {
+      "path": "artifacts/cutoff_studies/primary_d21_d28/posthoc_model_evaluation.json",
+      "bytes": 82104,
+      "sha256": "231bfeb1d4c7c3a3e3ec38e9a6c25c9746d77d78931e550cb0712b22648e3e43"
+    },
+    {
+      "path": "artifacts/evaluation_robustness/robustness.json",
+      "bytes": 9063,
+      "sha256": "d1338fae8dc3bb4a85507b307dfad42f36627e355ac3029285ea5ebeb69b0777"
+    },
+    {
+      "path": "artifacts/manuscript_figures/source_data.json",
+      "bytes": 10190,
+      "sha256": "45c23812133cc707a9a7b8f1345ac3b39f80793e1f28a521288e1d38be484053"
+    },
+    {
+      "path": "artifacts/positive_control/positive_control_metrics.json",
+      "bytes": 5050,
+      "sha256": "550baa95b2e5247c2b1a42d6a7d2b1bf26b75b14c022038e595e86b3b9c1bfda"
+    },
+    {
+      "path": "artifacts/positive_control/structure_metrics.json",
+      "bytes": 2259,
+      "sha256": "43346e83c9aa8d8ed698fd4c0568e7a798ed4619d97a38edabdaf71298650242"
+    },
+    {
+      "path": "artifacts/revision_results/revision_results.json",
+      "bytes": 2680856,
+      "sha256": "44f4304ea973740b5e23028dd88d22c38e710ac5eac47b723ee20d6dbda60c26"
+    },
+    {
+      "path": "configs/candidates.yaml",
+      "bytes": 919,
+      "sha256": "b1dd256b2916dbd2a383be7e07bcecf9b79009788a10a61e36a8ebf4d558a8dd"
+    },
+    {
+      "path": "configs/cutoff_studies.yaml",
+      "bytes": 1212,
+      "sha256": "f1d96de9d5b7e17382097c3fc0bccc80751b2b9190a20118e0780f9c424bd553"
+    },
+    {
+      "path": "external_runners/squidiff/baseline_provenance.py",
+      "bytes": 6582,
+      "sha256": "cfce9f64cb7b3fc7c8e5c1967959fd8fbaf6ae426276fefdc35fe41a584001ad"
+    },
+    {
+      "path": "external_runners/squidiff/build_zenodo_package.py",
+      "bytes": 12102,
+      "sha256": "2bf5a48aab45c91666ab90163096c4850ef3f2455610c1c888589734c766cd83"
+    },
+    {
+      "path": "external_runners/squidiff/carnk_latent_extrapolation.py",
+      "bytes": 11852,
+      "sha256": "ae89a657b054c2d5a7f07db2d36a04b1d82b2d2a0741142b653a7a93b0cd491f"
+    },
+    {
+      "path": "external_runners/squidiff/consolidate_revision_results.py",
+      "bytes": 9453,
+      "sha256": "1d96f75704963750347088f2c2bb442cb0d9515fb4726f0b6be1c4547632b967"
+    },
+    {
+      "path": "external_runners/squidiff/cutoff_study.py",
+      "bytes": 23891,
+      "sha256": "806a5bbac5fbc62f0d4a6337844534c5c2c769645efafb6b42b48a15ee390b9a"
+    },
+    {
+      "path": "external_runners/squidiff/evaluation_robustness.py",
+      "bytes": 17755,
+      "sha256": "494e60029721710b2cad74838363a5b9946ab124a038435b64e3a4e2a5e703a5"
+    },
+    {
+      "path": "external_runners/squidiff/generate_figures.py",
+      "bytes": 20685,
+      "sha256": "d3752a24d23c29737b215f429c30b4ee53f571b65e251f60512add74c77cbead"
+    },
+    {
+      "path": "external_runners/squidiff/latent_extrapolation_preprocessing_ab.py",
+      "bytes": 10337,
+      "sha256": "63d5561c8090c5a8f53067669951dca2c102665e1ff0175ec2d523e5d03e8aab"
+    },
+    {
+      "path": "external_runners/squidiff/latent_noise_scale_sweep.py",
+      "bytes": 7825,
+      "sha256": "27b67633e35598525d61e7788774f125bf409dea784ae14324e8a772c8d108f3"
+    },
+    {
+      "path": "external_runners/squidiff/load_released_checkpoint.py",
+      "bytes": 11116,
+      "sha256": "ceff3cd04bbc0aab64dc8f13f5c620434add50409ce5925c9db9b49904e231a7"
+    },
+    {
+      "path": "external_runners/squidiff/make_manuscript_figures.py",
+      "bytes": 26950,
+      "sha256": "8288f9d4d68f59377aebbd018b7fd8cba03486119c3a18b07a727f06b84d9938"
+    },
+    {
+      "path": "external_runners/squidiff/make_revision_figures.py",
+      "bytes": 20963,
+      "sha256": "a899e1c05a9fe182c8096c2019af9f9b5fd1bab2ffbcd3a3e5d32b35f7297db4"
+    },
+    {
+      "path": "external_runners/squidiff/output_calibration.py",
+      "bytes": 8161,
+      "sha256": "3119ba67ede31ff62c0a5c810e39e6af28366404755bc3b9442afce724f3ca58"
+    },
+    {
+      "path": "external_runners/squidiff/positive_control.py",
+      "bytes": 11065,
+      "sha256": "9ac25bb2a01ca19a9c3808e8385176836be3e0d5398575f885e861b1bcd04289"
+    },
+    {
+      "path": "external_runners/squidiff/positive_control_structure.py",
+      "bytes": 6497,
+      "sha256": "a03b829a440b6f0e210dde360a001a077d8d13a6dcb93f9fd16c9a8cda1b2bda"
+    },
+    {
+      "path": "external_runners/squidiff/posthoc_cutoff_evaluation.py",
+      "bytes": 10456,
+      "sha256": "03ecf3c72c5e27549224645b8b6598cc88f40b4b4f18c5599a4854ee49281505"
+    },
+    {
+      "path": "external_runners/squidiff/reproduce_upstream_simulated.py",
+      "bytes": 11521,
+      "sha256": "b4a5bfb0d1270890037d2e9d266dc2e8f77b1abcfbfbac96f00522f0eb4ab924"
+    },
+    {
+      "path": "external_runners/squidiff/run_tier0.py",
+      "bytes": 9421,
+      "sha256": "4ba39e95e4d2f1e7a17059b7d5cef321e2e5dce9a5b1a897058fb126404dafac"
+    },
+    {
+      "path": "external_runners/squidiff/run_tier0_gpu.py",
+      "bytes": 23239,
+      "sha256": "279a77099127f524236dcb31f1cd14f1e094d9f076a16366013748de49adb14e"
+    },
+    {
+      "path": "external_runners/squidiff/run_tier1.py",
+      "bytes": 10249,
+      "sha256": "a0c668138a61943e8c686c559244a1fb05dc3f167d31e6a24e86c40d5b686298"
+    },
+    {
+      "path": "external_runners/squidiff/sample.py",
+      "bytes": 2175,
+      "sha256": "bba912842f627ec55a9f662fb1d6d55ca8bd0b427413347ec93af3d5e57654d4"
+    },
+    {
+      "path": "external_runners/squidiff/seed_study.py",
+      "bytes": 11271,
+      "sha256": "1922978f19159a99fa8678f123f4dd106ec80cb9b5dabd998cfc3b3c25a12c2d"
+    },
+    {
+      "path": "external_runners/squidiff/smoke.py",
+      "bytes": 2109,
+      "sha256": "fc669f60d5d4d587f9a916c9a2d459a8f5e6ad1e9feefa3c3d849857352eafff"
+    },
+    {
+      "path": "external_runners/squidiff/tier0_experiment.py",
+      "bytes": 6359,
+      "sha256": "c6798d03d74ba85cf1017fd9ade5a2829fa143a3c86b2148a7061fd3f2de0459"
+    },
+    {
+      "path": "external_runners/squidiff/train.py",
+      "bytes": 2790,
+      "sha256": "20c1401c99d709556b3a2afeab0c5ea18fcf8bb2e6f1bbeb033a3b2be84674ff"
+    },
+    {
+      "path": "external_runners/squidiff/train_step_sweep.py",
+      "bytes": 7493,
+      "sha256": "72cfe844af3200f94db2e11ef5f08c8cfc798432739fc4e02e3c6b1dc2fee44b"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1837,
+      "sha256": "e5386ce590c81a11978fb088d24ed98f4740bba9dca9f684cbb2734956a81791"
+    },
+    {
+      "path": "src/reuse_gate/__init__.py",
+      "bytes": 101,
+      "sha256": "b74f4eb377906ce2e051b3bfe82cbeb0c6fd60b5ce39153a0c0520020ffe50b2"
+    },
+    {
+      "path": "src/reuse_gate/cli.py",
+      "bytes": 1381,
+      "sha256": "0c4f40798061bfed5e2575c113188124cf1e09dbc38c6e5858d73b2174299b99"
+    },
+    {
+      "path": "src/reuse_gate/data/__init__.py",
+      "bytes": 77,
+      "sha256": "034c6fc8dad71c81e373b68a1ae98a710517b829d30a8f584ac21a01509665b1"
+    },
+    {
+      "path": "src/reuse_gate/data/contracts.py",
+      "bytes": 2742,
+      "sha256": "e387547429280ab7c6b5bf0c337f9d1b52b7be6424b21ed265692c1844a40b4d"
+    },
+    {
+      "path": "src/reuse_gate/data/download.py",
+      "bytes": 776,
+      "sha256": "f7561058f5bd5aeb404e94febbd5caa0fa1966d5d12e4b07a1a5fb440d435b70"
+    },
+    {
+      "path": "src/reuse_gate/data/gse190976.py",
+      "bytes": 3623,
+      "sha256": "43c74c8cc1a0b6af8081fb40fe4549adb73e067764918f4e4383cf88993784ad"
+    },
+    {
+      "path": "src/reuse_gate/data/gse221552.py",
+      "bytes": 2212,
+      "sha256": "8d5d8b639c6bffd4542e4dd85a8436d1729f255a930dfb8f504ec44e9e9530bc"
+    },
+    {
+      "path": "src/reuse_gate/decision.py",
+      "bytes": 2592,
+      "sha256": "b7de6312305fffa641effda2a9570bd2cc3126d5ae78d1fcdbbb8412f5b6c242"
+    },
+    {
+      "path": "src/reuse_gate/gates/__init__.py",
+      "bytes": 70,
+      "sha256": "74fd7a1e90df7d49466b6350765d822c7e2d2cd84e597d45f7618a044bd55f16"
+    },
+    {
+      "path": "src/reuse_gate/gates/base.py",
+      "bytes": 979,
+      "sha256": "f5589594a25716a3e1f073d57087a6f71059e098b8517840bcc4b8889fda1639"
+    },
+    {
+      "path": "src/reuse_gate/gates/cmonge.py",
+      "bytes": 833,
+      "sha256": "6b9b09693092e10cb156c8ff3338bca16ca8be32deae42d20e5e607947e3e9a2"
+    },
+    {
+      "path": "src/reuse_gate/gates/nichetrans.py",
+      "bytes": 3486,
+      "sha256": "a88f9cd5430ac711fe4bdb10079ac0cfba4959f28f37920912b50eedd841248e"
+    },
+    {
+      "path": "src/reuse_gate/gates/squidiff.py",
+      "bytes": 847,
+      "sha256": "e7a474d5232b17995f6e2235e7a16d37af4692a3ab2c791733b409aee36a7d81"
+    },
+    {
+      "path": "src/reuse_gate/hashing.py",
+      "bytes": 813,
+      "sha256": "766281345e9ded7f3125e6ae1b5673c470004b53840ad4dab8f09d1ea2e83183"
+    },
+    {
+      "path": "src/reuse_gate/metrics/__init__.py",
+      "bytes": 380,
+      "sha256": "f3e3cb447060aee3d40d237e78e9e176457ea1150365edb22748c2627ec4b38c"
+    },
+    {
+      "path": "src/reuse_gate/metrics/distribution.py",
+      "bytes": 3531,
+      "sha256": "5f18a0840c8ec6acc22e8098f55a6176d869079ec82aa5982751ab16f1cb8f73"
+    },
+    {
+      "path": "src/reuse_gate/metrics/regression.py",
+      "bytes": 1310,
+      "sha256": "9c2a7f979e43b5979098e57930c93f0c326da700542cd94b242760ef20b3769b"
+    },
+    {
+      "path": "src/reuse_gate/metrics/structure.py",
+      "bytes": 6148,
+      "sha256": "27c663c64b38670efd945e03e2c62f79ea31a90e5eb071511f34235d55914aac"
+    },
+    {
+      "path": "src/reuse_gate/models/__init__.py",
+      "bytes": 64,
+      "sha256": "a33c80aa669da2eb3f46e394fcd1278c9353bb71b14e83f02a2325f33cebd83c"
+    },
+    {
+      "path": "src/reuse_gate/models/external.py",
+      "bytes": 3022,
+      "sha256": "4f079aa68018fa4b9ecba6031553d85ae8027f91ab11fe6fa0426418b439fd2e"
+    },
+    {
+      "path": "src/reuse_gate/models/protocol.py",
+      "bytes": 449,
+      "sha256": "5766be4991dcb3e8d91734b45bfcbb66da69b9fb53698edbabf2b4ee94a95e9a"
+    },
+    {
+      "path": "src/reuse_gate/models/temporal_baselines.py",
+      "bytes": 7589,
+      "sha256": "851257b3a7bd199999ef0e4c5a5e6a22b025f0d445f1b25aa83ac93fe201c78e"
+    },
+    {
+      "path": "src/reuse_gate/orchestration/__init__.py",
+      "bytes": 56,
+      "sha256": "ee2b6a58defd4046e3c43a6970b3fc94053cc1ecdc93c473c90463f768d84b10"
+    },
+    {
+      "path": "src/reuse_gate/orchestration/run_id.py",
+      "bytes": 843,
+      "sha256": "b1eab56d9805823ac7c4c6e69f5833ff2ef0ec7620c6bd1955f9d7e8adf4d0c0"
+    },
+    {
+      "path": "src/reuse_gate/provenance.py",
+      "bytes": 5990,
+      "sha256": "cf0a5fa1bac6ee765c7cfcf9e28e39c0b9099c1352ecdadb71de8a6659be2295"
+    },
+    {
+      "path": "src/reuse_gate/schemas.py",
+      "bytes": 2892,
+      "sha256": "a8d8e5342daa95ed0d9151b7108b65df50cdb7292efb66e3c5c497bfbd3e5c17"
+    },
+    {
+      "path": "src/reuse_gate/splits/__init__.py",
+      "bytes": 419,
+      "sha256": "e2b04d10c7f040ff2e7b262ad3c3f5337e94d3d387691df0b29a8e7e6f9437a7"
+    },
+    {
+      "path": "src/reuse_gate/splits/audit.py",
+      "bytes": 783,
+      "sha256": "bfeb598a976c041ca1fce34404440202df19f708369b2da715a6fc8e0c0fe616"
+    },
+    {
+      "path": "src/reuse_gate/splits/perturbation.py",
+      "bytes": 1290,
+      "sha256": "738ebdf66db1ab857284cd0efead4ebae7d9ec4425ab97e0beac7ef60db09a10"
+    },
+    {
+      "path": "src/reuse_gate/splits/temporal.py",
+      "bytes": 1746,
+      "sha256": "eec2e1e51b1487e730cbe490fa37b4e7bab5ac077687656bdf25bd9e34f0a4ac"
+    },
+    {
+      "path": "src/reuse_gate/splits/temporal_cutoffs.py",
+      "bytes": 4200,
+      "sha256": "9e254b440bd10541d9b9a7564517767dc478412f9f95fc6529c9626de165bd66"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 416,
+      "sha256": "9037c39c596d10e6ea6bb9e26676eb1cc883229e84a1de5a57761b38f2ed388e"
+    },
+    {
+      "path": "tests/integration/test_positive_control.py",
+      "bytes": 2360,
+      "sha256": "cbb7c4311c0918098e972f824dc828c760cdc2a2ef34da02bb67c6d2f0e73ae3"
+    },
+    {
+      "path": "tests/integration/test_positive_control_structure.py",
+      "bytes": 1871,
+      "sha256": "22d8e3c517f078947b145441c188fb62a0fd3f4c32e118ac27fea51d61943682"
+    },
+    {
+      "path": "tests/integration/test_squidiff_smoke.py",
+      "bytes": 2560,
+      "sha256": "fe625812f940df97a60a2c71cf5e46207e0ad4144a3a77215d6da807d468e944"
+    },
+    {
+      "path": "tests/regression/test_squidiff_patches.py",
+      "bytes": 8697,
+      "sha256": "c4f29c42cfe4b77c37f9b18f9f888d08a3d4157bf2638467e7907f6c7a04eef7"
+    },
+    {
+      "path": "tests/unit/test_baseline_provenance.py",
+      "bytes": 2335,
+      "sha256": "24ba83ad7000db3ca953e173595b1f63a1f5c7aee8be325ee83b43a8881caa9b"
+    },
+    {
+      "path": "tests/unit/test_cutoff_study.py",
+      "bytes": 3662,
+      "sha256": "951b047d7f45e83f798a3f962060fa24ce5c37e2c2ab2e99970bef68f5e8685e"
+    },
+    {
+      "path": "tests/unit/test_data_contracts.py",
+      "bytes": 3114,
+      "sha256": "ec451d60e44584f6a65a019921e68027e62c3dd0534d97e7c65be86dfc335b54"
+    },
+    {
+      "path": "tests/unit/test_decision.py",
+      "bytes": 2913,
+      "sha256": "17cffa4aa257810a6df336c9f04f00c665ce46791984ccebb995b9db9ed0f087"
+    },
+    {
+      "path": "tests/unit/test_distribution_metrics.py",
+      "bytes": 3795,
+      "sha256": "da35c1a16a28d9bfea52b06b1e019bf456a32f3f9a83cb99d5016a5afc931a43"
+    },
+    {
+      "path": "tests/unit/test_download.py",
+      "bytes": 980,
+      "sha256": "171b86795f72dc42e2f6984f0d08d477791a58eefc3310a6e35f7751ff88193f"
+    },
+    {
+      "path": "tests/unit/test_external_runner.py",
+      "bytes": 2452,
+      "sha256": "2f5d9816b6eafda4dca73e5363ce8465b44510c9056da23d78e2fa76b10c133c"
+    },
+    {
+      "path": "tests/unit/test_gates.py",
+      "bytes": 2005,
+      "sha256": "c39881a3ca260889273ccf1ff5f625a61b7d3140566f853a30f78a2ae78fdbd4"
+    },
+    {
+      "path": "tests/unit/test_gse190976.py",
+      "bytes": 1795,
+      "sha256": "b5729c2121b0ff8d449c1b27db6257db914be19acf77e9ce2d29ba0ff9aad068"
+    },
+    {
+      "path": "tests/unit/test_gse221552.py",
+      "bytes": 869,
+      "sha256": "b53dd322ff4355fc91715453a2e7181eedd067ddf6695fa21de58941b871ab04"
+    },
+    {
+      "path": "tests/unit/test_hashing.py",
+      "bytes": 1197,
+      "sha256": "c97f7e125814bff7bc5c8cc99251fbc67e4a279224f3f0d341ba6c6c93f2e76d"
+    },
+    {
+      "path": "tests/unit/test_leakage_audit.py",
+      "bytes": 923,
+      "sha256": "661e2f2d2f6cb6327b063b3b407d690ccf8a993c9f35d60ea2b5c758571c6904"
+    },
+    {
+      "path": "tests/unit/test_perturbation_split.py",
+      "bytes": 1738,
+      "sha256": "77d50b5e4ffbd199ea03fcadbbc893c6b2fbe7cea421261a72158b08aa85f454"
+    },
+    {
+      "path": "tests/unit/test_posthoc_cutoff_evaluation.py",
+      "bytes": 3841,
+      "sha256": "6bd671636ef277d4c15c2a75075c91b22c995fb3f64b9736c3ac8f67c86e7069"
+    },
+    {
+      "path": "tests/unit/test_provenance.py",
+      "bytes": 1459,
+      "sha256": "e9d1bca8104243acac810569359ec7b7be8ba6d99dc72cde520065b8901236fe"
+    },
+    {
+      "path": "tests/unit/test_revision_figures.py",
+      "bytes": 6285,
+      "sha256": "833b77837125763832ec65c1a04b3548847903e53b3acb45610163539bb01a9c"
+    },
+    {
+      "path": "tests/unit/test_revision_results.py",
+      "bytes": 4865,
+      "sha256": "7c18d77d8786e259888bf601de3d18646dbdf58b1c9837077340cd96f47d04a5"
+    },
+    {
+      "path": "tests/unit/test_robustness.py",
+      "bytes": 6514,
+      "sha256": "ade712edb2df3da1cf3d28ee3d747d81d3ae7251b8e964962655303c7a864106"
+    },
+    {
+      "path": "tests/unit/test_run_id.py",
+      "bytes": 2018,
+      "sha256": "c7f47420805d9eefa07a6c9c3d5298c253d14924c023465eb4a39974786413bd"
+    },
+    {
+      "path": "tests/unit/test_schemas.py",
+      "bytes": 2171,
+      "sha256": "b09068108911a395008e20c543f23c72fbbac894d3347974a0854050527a5d37"
+    },
+    {
+      "path": "tests/unit/test_spatial_metrics.py",
+      "bytes": 975,
+      "sha256": "9e850ea54bd2336f7150c5b8deb7e6fd3f7da6df6f94840a5eb91cf523a160b0"
+    },
+    {
+      "path": "tests/unit/test_structure_metrics.py",
+      "bytes": 3225,
+      "sha256": "e04162d56aebc756b21d54d7f0eb68ce5922c91c59175e6a343f96baa5954daa"
+    },
+    {
+      "path": "tests/unit/test_temporal_baselines.py",
+      "bytes": 2424,
+      "sha256": "cd6ce3573be6f2109fe6ee38dd731233476e05b077effcb48b6c535020f76de7"
+    },
+    {
+      "path": "tests/unit/test_temporal_cutoffs.py",
+      "bytes": 2439,
+      "sha256": "fb6b67ed4a1e7ad3ee4c348c9f5adbbce036e7a6a4c2825f09ef48ce291d9730"
+    },
+    {
+      "path": "tests/unit/test_temporal_split.py",
+      "bytes": 1481,
+      "sha256": "31f7fe7bf7228cf02e5b21e17c919e4c595c484f6701295f9c157af1bb5bbba8"
+    },
+    {
+      "path": "tests/unit/test_temporal_structured_baselines.py",
+      "bytes": 3167,
+      "sha256": "262906f784085f1172f61253f16e7e6a56619bbd59ed03658f195bbf3a05a047"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 486231,
+      "sha256": "9d065988dbe51702a870838c282308a5a015b7ba0b155788dff00f1a734ed3c2"
+    },
+    {
+      "path": "vendor/manifests/squidiff.json",
+      "bytes": 801,
+      "sha256": "21d08f35095f4b8ab4a7809cca8b072d650838dc95b2a594d72d696030c27766"
+    },
+    {
+      "path": "vendor/patches/squidiff/0001-group-label-dtype.patch",
+      "bytes": 1394,
+      "sha256": "985509dbb622cd2bafa1f9cf4ef6571f43fe39429b59fa7d575add4e6ea0715d"
+    },
+    {
+      "path": "vendor/patches/squidiff/0002-group-label-device.patch",
+      "bytes": 1088,
+      "sha256": "2e93ec329b3117a6beb72cbeb2f400762bcf79ec36b2c92f0ade6eb5d17d93b9"
+    },
+    {
+      "path": "vendor/patches/squidiff/0003-label-embed-shape.patch",
+      "bytes": 583,
+      "sha256": "275654d9af857cae07fa029dccaaa05f478b7c41d9df702d1484b4e95b6070b9"
+    },
+    {
+      "path": "vendor/patches/squidiff/README.md",
+      "bytes": 4072,
+      "sha256": "7098ace033961a68243fcd6d48256c00391424252b11e49a9752b13af7fdedc8"
+    }
+  ],
+  "secret_scan": {
+    "patterns": 5,
+    "hits": []
+  }
+}

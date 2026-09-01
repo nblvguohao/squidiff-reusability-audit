@@ -1,0 +1,49 @@
+model:
+  class_cond: false
+  use_encoder: true
+  num_layers: 3
+  diffusion_steps: 1000
+  num_channels: 128
+  steps: 50000
+  batch_size: 64
+  n_genes: 500
+  log_normalize: true
+
+evaluation:
+  structure_cluster_counts: [6, 8, 10, 12]
+  rare_thresholds: [0.05, 0.10, 0.15]
+  factor_component_grid: [5, 10, 20, 50]
+  factor_variance_target: 0.90
+
+studies:
+  primary_d21_d28:
+    train_times: [0, 7, 14]
+    test_times: [21, 28]
+    primary_test_times: [21, 28]
+    exploratory_test_times: []
+    direction_times: [7, 14]
+    validation_triplet: [0, 7, 14]
+    fixed_scales: []
+    candidate_scales: [0.0, 0.03, 0.10, 0.30, 0.70]
+    seeds: [13, 37, 73, 101, 137]
+
+  early_d14:
+    train_times: [0, 7]
+    test_times: [14, 21, 28]
+    primary_test_times: [14]
+    exploratory_test_times: [21, 28]
+    direction_times: [0, 7]
+    validation_triplet: null
+    fixed_scales: [0.0, 0.03]
+    seeds: [13, 37, 73, 101, 137]
+
+  late_d28:
+    train_times: [0, 7, 14, 21]
+    test_times: [28]
+    primary_test_times: [28]
+    exploratory_test_times: []
+    direction_times: [14, 21]
+    validation_triplet: [7, 14, 21]
+    fixed_scales: []
+    candidate_scales: [0.0, 0.03, 0.10, 0.30, 0.70]
+    seeds: [13, 37, 73, 101, 137]

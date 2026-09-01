@@ -1,0 +1,85 @@
+cff-version: 1.2.0
+title: Squidiff reusability audit
+message: >-
+  If you use this software or its frozen evidence records, please cite this
+  software record and the accompanying Reusability Report.
+type: software
+authors:
+  - family-names: Lv
+    given-names: Guohao
+    email: lvguohao@stu.ahau.edu.cn
+    affiliation: >-
+      School of Artificial Intelligence, Anhui Agricultural University,
+      Hefei 230036, China
+  - family-names: Xia
+    given-names: Yingchun
+    affiliation: >-
+      School of Artificial Intelligence, Anhui Agricultural University,
+      Hefei 230036, China
+  - family-names: Liu
+    given-names: Huichao
+    affiliation: >-
+      School of Artificial Intelligence, Anhui Agricultural University,
+      Hefei 230036, China
+  - family-names: Zhu
+    given-names: Xiaolei
+    affiliation: >-
+      School of Artificial Intelligence, Anhui Agricultural University,
+      Hefei 230036, China
+  - family-names: Yang
+    given-names: Shuai
+    affiliation: >-
+      School of Artificial Intelligence, Anhui Agricultural University,
+      Hefei 230036, China
+  - family-names: Zhou
+    given-names: Ailian
+    email: zhouailian@caas.cn
+    affiliation: >-
+      Agricultural Information Institute, Chinese Academy of Agricultural
+      Sciences, Beijing 100081, China
+  - family-names: Gu
+    given-names: Lichuan
+    email: glc@ahau.edu.cn
+    affiliation: >-
+      School of Artificial Intelligence, Anhui Agricultural University,
+      Hefei 230036, China
+abstract: >-
+  Audit code, corrective patches and frozen numerical evidence for a
+  leakage-safe reusability assessment of Squidiff, a diffusion model for
+  single-cell development and perturbation prediction. Includes three
+  regression-tested patches to the label-conditional interface, temporal
+  splitting and training-window-only baselines, distribution, dependence and
+  population-composition metrics, and the per-seed evaluation records at three
+  leakage-safe temporal cutoffs with their same-distribution reference.
+keywords:
+  - reusability
+  - reproducibility
+  - single-cell transcriptomics
+  - diffusion models
+  - evaluation
+  - data leakage
+license: MIT
+repository-code: https://github.com/nblvguohao/squidiff-reusability-audit
+references:
+  - type: article
+    title: >-
+      Squidiff: predicting cellular development and responses to perturbations
+      using a diffusion model
+    authors:
+      - family-names: He
+        given-names: Siyu
+    journal: Nature Methods
+    volume: 23
+    start: 65
+    end: 77
+    year: 2026
+    doi: 10.1038/s41592-025-02877-y
+  - type: data
+    title: >-
+      Squidiff CAR-NK reusability report — model checkpoints, splits, and
+      figure source data
+    authors:
+      - family-names: Lv
+        given-names: Guohao
+    year: 2026
+    doi: 10.5281/zenodo.21510503
